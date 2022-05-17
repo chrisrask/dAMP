@@ -1,0 +1,10 @@
+functions.c:18:5:pbSelection	8	static
+functions.c:29:5:countGain	24	static
+functions.c:74:7:countImpedance	24	static
+functions.c:103:6:print	24	static
+functions.c:166:5:amplify	16	static
+functions.c:213:6:outImp	16	static
+functions.c:228:5:countStab	24	static
+functions.c:254:5:fanSet	24	static
+functions.c:281:5:fanCtrl	16	static
+functions.c:302:5:tempWarning	16	static
