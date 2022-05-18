@@ -1,8 +1,6 @@
 pipeline {
     agent {
-        dockerfile {
-            label "Dockerfile"
-            dir('test')
+        dockerfile true
             // kör jenkinsfil från dAMP git repo
         }
     }
