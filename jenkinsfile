@@ -3,7 +3,6 @@ pipeline {
         dockerfile true
             // kör jenkinsfil från dAMP git repo
         }
-    }
     stages {
         stage('Checkout Codebase'){
             steps{
