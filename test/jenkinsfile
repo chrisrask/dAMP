@@ -1,0 +1,28 @@
+pipeline {
+    agent {
+        dockerfile {
+            label "Docker"
+            dir('dAMP')
+            // kör jenkinsfil från dAMP git repo
+        }
+    }
+    stages {
+        stage('Checkout Codebase'){
+            steps{
+                step{
+                    echo ('Checking Git Codebase')
+                    cleanWs()
+                    checkout scm : [$class: 'GitSCM', branches [[name: '*/main']], userRemoteConfigs: [credentialsId: 'github-ssh-key', url: 'git@github.com:chrisrask/dAMP.git']]
+                }
+            }
+        }
+
+        stage ('Build Stage') {
+            steps{
+                sh 'mkdir lib'
+                sh ''
+            }
+        }
+    }
+
+}
