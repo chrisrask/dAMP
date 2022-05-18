@@ -4,8 +4,12 @@ pipeline {
     stages {
         stage('Checkout Codebase'){
             steps{
-                    echo 'Checking Git Codebase'
-                    git branch: 'main', credentialsId: '258df156-d543-4369-be15-d55b368f8d26', url: 'https://github.com/chrisrask/dAMP.git'
+                    checkout([$class: 'GitSCM', branches: [[name: '*/new_branch']], extensions: [], userRemoteConfigs: [[credentialsId: '11b5ad78-8b16-421d-8c7d-cdda564e043f', url: 'https://github.com/chrisrask/dAMP.git']]])
+            }
+        }
+        stage('Build'){
+            steps{
+                git branch: 'new_branch', credentialsId: '11b5ad78-8b16-421d-8c7d-cdda564e043f', url: 'https://github.com/chrisrask/dAMP.git'
             }
         }
     }
