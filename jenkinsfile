@@ -2,7 +2,7 @@ pipeline {
     agent {
         dockerfile true
         }
-    stages {
+    /*stages {
         stage('Checkout Codebase'){
             steps{
                     echo ('Checking Git Codebase')
@@ -16,5 +16,5 @@ pipeline {
             }
         }
     }
-
+*/
 }
