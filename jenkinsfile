@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    
+
     stages {
         stage('Checkout Codebase'){
             steps{
@@ -8,12 +8,5 @@ pipeline {
                     git branch: 'main', credentialsId: '258df156-d543-4369-be15-d55b368f8d26', url: 'https://github.com/chrisrask/dAMP.git'
             }
         }
-
-        stage ('Build Stage') {
-            steps{
-                echo "Building"
-            }
-        }
     }
-
 }
