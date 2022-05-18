@@ -6,17 +6,14 @@ pipeline {
     stages {
         stage('Checkout Codebase'){
             steps{
-                step{
                     echo ('Checking Git Codebase')
                     git branch: 'main', credentialsId: '258df156-d543-4369-be15-d55b368f8d26', url: 'https://github.com/chrisrask/dAMP.git'
-                }
             }
         }
 
         stage ('Build Stage') {
             steps{
-                sh 'mkdir lib'
-                sh ''
+                echo "Building"
             }
         }
     }
